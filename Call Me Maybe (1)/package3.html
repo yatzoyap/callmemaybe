@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Call Me Maybe | Package 3</title>
+        <link rel="icon" href="logo.png">
+        <style>
+            body {
+                margin: 0;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+            }
+            nav {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            a {
+                text-decoration: none;
+                font-family: Roboto;
+                color: #142380;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            .call-button {
+                background-color: #e23cb3;
+                color: white;
+                margin: 0 5px;
+                padding: 8px;
+                border-radius: 25px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            nav a:not(.call-button):hover {
+                color: #e23cb3;
+            }
+            .call-button:hover {
+                background-color: #142380
+            }
+            .line {
+                border: none; 
+                border-top: 2px solid #d84c9c; 
+                width: 100%;
+                margin: 0;
+            }
+            footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 8%;
+                background-color: #142380;
+                font-family: Roboto;
+            }
+            .socials {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 30px;
+                align-items: center;
+            }
+            .socials a {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: white;
+            }
+            .columns {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding: 20px;
+            }
+            .column1 {
+                display: flex;
+                flex: 1;
+                min-width: 250px;
+                margin: 0;
+                border: 2px solid #d84c9c;
+                border-radius: 25px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .column2 {
+                flex: 2;
+                min-width: 300px;
+                margin: 0;
+                border: 2px solid #d84c9c;
+                border-radius: 25px;
+                padding-top: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-bottom: 5px;
+            }
+            .back {
+                display: inline-block;
+                border: 2px solid #d84c9c;
+                padding: 8px 12px;
+                border-radius: 50px;
+                margin: 20px;
+                transition: all 0.2s;
+            }
+            .back:hover {
+                border: 2px solid #142380;
+            }
+            h1 {
+                font-size: 60px;
+                font-weight: bold;
+                color: black;
+            }
+            h2 {
+                font-family: Roboto;
+                font-size: 100px;
+                font-weight: bold;
+                text-align: center;
+                margin: 20px;
+            }
+            h3 {
+                font-family: Roboto;
+                font-size: 60px;
+                font-weight: bold;
+                text-align: justify;
+                margin-top: 10px;
+                margin-bottom: 30px;
+                color: #d84c9c;
+            }
+            h4 {
+                font-family: Roboto;
+                font-size: 30px;
+                text-align: justify;
+                margin-top: 0;
+                margin-bottom: 0;
+                color: #142380;
+            }
+            h5 {
+                font-family: Roboto;
+                font-size: 25px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: #142380;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="title.png" width="300"></a>
+            <nav>
+                <a href="index.html"><font color="">Home</font></a>
+                <a href="about_us.html"><font color="">About Us</font></a>
+                <a href="package_details.html"><font color="#d84c9c">Package Details</font></a>
+                <a href="callers_info.html"><font color="">Callers Information</font></a>
+                <a href="call_us.html" class="call-button">Call Us ➜</a>
+            </nav>
+        </header>
+        <hr class="line">
+        <br>
+
+        <h1 class="back"><a href="package_details.html"><font color="black">← Package Details</font></a></h1>
+        <section class="columns">
+            <div class="column1">
+                <h2>Package</h2>
+                <h2><font color="#d84c9c">3</font></h2>
+            </div>
+            <div class="column2">
+                <h3>Deep Talks & Daddy Issues</h3>
+                <h4>Details:</h4>
+                <h4>Unravel your dynamics by meeting up with our very best callers and sharing with them. No matter how light or heavy the topic may be, they’ll listen!</h4>
+                <br>
+                <h5>Duration: 90 minutes</h5>
+                <h5>Price: Rp 75,000.00 IDR</h5>
+            </div>
+        </section>
+
+        <footer>
+            <div class="socials">
+                <a href="http://instagram.com/08_dsc"><img src="ig_logo.png" height="35" width="35">@08_dsc</a>
+                <a href="http://instagram.com/louischong_"><img src="ig_logo.png" height="35" width="35">@louischong_</a>
+                <a href="http://instagram.com/nicholas.bachtiar"><img src="ig_logo.png" height="35" width="35">@nicholas.bachtiar</a>
+            </div>
+        </footer>
+    </body>
+</html>
