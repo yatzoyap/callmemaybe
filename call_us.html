@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Call Me Maybe | Call Us</title>
+        <link rel="icon" href="logo.png">
+        <style>
+            body {
+                margin: 0;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+            }
+            nav {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            a {
+                text-decoration: none;
+                font-family: Roboto;
+                color: #142380;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            .call-button {
+                background-color: #142380;
+                color: white;
+                margin: 0 5px;
+                padding: 8px;
+                border-radius: 25px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            nav a:not(.call-button):hover {
+                color: #e23cb3;
+            }
+            .line {
+                border: none; 
+                border-top: 2px solid #d84c9c; 
+                width: 100%;
+                margin: 0;
+            }
+            footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 8%;
+                background-color: #142380;
+                font-family: Roboto;
+            }
+            .socials {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 30px;
+                align-items: center;
+            }
+            .socials a {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: white;
+            }
+            .columns {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding: 20px;
+            }
+            .column1 {
+                display: flex;
+                flex: 2;
+                min-width: 250px;
+                margin: 0;
+                border: 2px solid #d84c9c;
+                border-radius: 25px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .column2 {
+                flex: 6;
+                min-width: 300px;
+                margin: 0;
+                border: 2px solid #d84c9c;
+                border-radius: 25px;
+                padding: 30px;
+            }
+            .back {
+                display: inline-block;
+                border: 2px solid #d84c9c;
+                padding: 8px 12px;
+                border-radius: 50px;
+                margin: 20px;
+                transition: all 0.2s;
+            }
+            .back:hover {
+                border: 2px solid #142380;
+            }
+            h1 {
+                font-size: 60px;
+                font-family: Roboto;
+                font-weight: bold;
+                color: black;
+                margin: 20px 0;
+            }
+            h2 {
+                font-family: Roboto;
+                font-size: 30px;
+                color: #d84c9c;
+                margin: 10px 0;
+                display: inline-block;
+                white-space: nowrap;               
+            }
+            .uniform {
+                width: 300px;
+                padding: 5px;
+                margin: 10px;
+                border: 2px solid #c8c8c8;
+                border-radius: 2px;
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: gray;
+            }
+            .confirm {
+                background-color: #e23cb3;
+                color: white;
+                padding: 10px;
+                border-radius: 25px;
+                border: none;
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .confirm:hover {
+                background-color: #142380;
+            }
+            input[type="text"] {
+                height: 30px;
+                font-size: 25px;
+            }
+            input[id="name"] {
+                width: 930px
+            }
+                        input[id="number"] {
+                width: 810px
+            }
+                        input[id="age"] {
+                width: 958px
+            }
+                        input[id="job"] {
+                width: 715px
+            }
+            .form-group {
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="title.png" width="300"></a>
+            <nav>
+                <a href="index.html"><font color="">Home</font></a>
+                <a href="about_us.html"><font color="">About Us</font></a>
+                <a href="package_details.html"><font color="">Package Details</font></a>
+                <a href="callers_info.html"><font color="">Callers Information</font></a>
+                <a class="call-button">Call Us ➜</a>
+            </nav>
+        </header>
+        <hr class="line">
+        <br>
+
+        <div style="display: flex; justify-content: space-between; padding: 0 20px;">
+        <h1>Check Out</h1>
+        <h1 class="back"><a href="index.html"><font color="black">← Home</font></a></h1>
+        </div>
+
+        <section class="columns">
+            <div class="column1">
+                <div style="padding: 10px">
+                    <select class="uniform" id="packageSelect" onchange="updateTotal()">
+                        <option value="" disabled selected>Select Package</option>
+                        <option value="p1" data-price="25000">Package 1</option>
+                        <option value="p2" data-price="50000">Package 2</option>
+                        <option value="p3" data-price="75000">Package 3</option>    
+                    </select>
+                    <br>
+                    <select class="uniform">
+                        <option value="" disabled selected>Select Caller</option>
+                        <option value="p1">Nicholas Kenneth Bachtiar</option>
+                        <option value="p2">Louis Chong</option>
+                        <option value="p3">Darrel Sebastian Chen</option>    
+                    </select>
+                    <br>
+                    <select class="uniform">
+                        <option value="" disabled selected>Select Available Time</option>
+                        <option value="p1">10:00 AM</option> 
+                        <option value="p2">11:00 AM</option> 
+                        <option value="p3">12:00 PM</option> 
+                        <option value="p4">1:00 PM</option>
+                        <option value="p5">2:00 PM</option>
+                        <option value="p6">3:00 PM</option>
+                        <option value="p7">4:00 PM</option>
+                    </select>
+                </div>
+            </div>
+            <div class="column2">
+                <form name="payment">
+                    <label for="name"><h2>Name: </h2></label>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="number"><h2>Phone Number: </h2></label>
+                    <input type="text" id="number" name="number"><br>
+                    <label for="age"><h2>Age: </h2></label>
+                    <input type="text" id="age" name="age"><br>
+                    <label for="job"><h2>Occupation (Optional): </h2></label>
+                    <input type="text" id="job" name="job"><br>
+                </form>
+                <br>
+                <h2>Total Payment: <span id="totalPayment">Rp. 0</span></h2>
+                <br>
+                <button type="button" class="confirm" onclick="doSubmit()">Confirm Payment</button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="socials">
+                <a href="http://instagram.com/08_dsc"><img src="ig_logo.png" height="35" width="35">@08_dsc</a>
+                <a href="http://instagram.com/louischong_"><img src="ig_logo.png" height="35" width="35">@louischong_</a>
+                <a href="http://instagram.com/nicholas.bachtiar"><img src="ig_logo.png" height="35" width="35">@nicholas.bachtiar</a>
+            </div>
+        </footer>
+
+        <script>
+            function doSubmit(){
+                const name = document.payment.name.value;
+                const number = document.payment.number.value;
+                const age = document.payment.age.value;
+                const job = document.payment.job.value || "Not provided";
+                const packageSelect = document.getElementById('packageSelect');
+                const selectedPackage = packageSelect.options[packageSelect.selectedIndex].text;
+                const totalPayment = document.getElementById('totalPayment').textContent;
+
+                if (!name || !number || !age || packageSelect.selectedIndex === 0) {
+                    confirm("Please fill in all required fields.");
+                    return;
+                }
+
+                confirm (`Receipt:
+                Name: ${name}
+                Phone Number: ${number}
+                Age: ${age}
+                Occupation: ${job}
+                Selected Package: ${selectedPackage}
+                Total Payment: ${totalPayment}`);
+
+                document.payment.name.value = "";
+                document.payment.number.value = "";
+                document.payment.age.value = "";
+                document.payment.job.value = "";
+                document.getElementById('packageSelect').selectedIndex = 0;
+                document.querySelectorAll('.uniform:not(#packageSelect)').forEach(select => {select.selectedIndex = 0;})
+                document.getElementById('totalPayment').textContent = "Rp. 0";
+            }
+
+            function updateTotal() {
+                const packageSelect = document.getElementById('packageSelect');
+                const selectedOption = packageSelect.options[packageSelect.selectedIndex];
+                const price = selectedOption.getAttribute('data-price') || '0';
+                const formattedPrice = new Intl.NumberFormat('en-US').format(price);
+                document.getElementById('totalPayment').textContent = `Rp. ${formattedPrice}`;
+            }
+        </script>
+    </body>
+</html>
